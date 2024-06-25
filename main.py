@@ -5,19 +5,25 @@ import requests
 import random
 import time
 
+#hosting
 app = Flask('')
+
 
 @app.route('/')
 def home():
-    return "Hello. I am alive!"
+  return "Lina Api"
+
 
 def run():
-  app.run(host='0.0.0.0',port=8080)
+  app.run(host='0.0.0.0', port=8080)
+
 
 def keep_alive():
-    t = Thread(target=run)
-    t.start()
+  t = Thread(target=run)
+  t.start()
 
+
+keep_alive()
 
 access_token = 'EAAWGa1uBPLsBO2mjOIPYyaVtBcZCM2dm7iqJCcplr3TnpC2Fjob6yiIqDMRL8JmZC8kUrTk83vwpzsnE06ZAXtAi3xzPIkP4ujg6QDiTZC1w1ZBEGBEHGiISZBmXRHLIgK2TwBClmw2Ba8hmR3PZBm7VPUDA9sdytefD4oXbA6GrAoTsXiZAQwk8OgZBNJCcQx8xZAYLtJYieD7q0mWDoZASHuwvZBZAk8QZDZD'
 # Connection to the Facebook API
